@@ -19,6 +19,7 @@ export default class App extends Component {
     };
 
     async.map(listOfTwitchers, (current_username, callback) => {
+      // using jsonp hack/workaround
       $.getJSON('https://wind-bow.gomix.me/twitch-api/streams/'+ current_username + '?callback=?', function(allTwitcherData) {
         const newTwitcher = {
           ...allTwitcherData,
