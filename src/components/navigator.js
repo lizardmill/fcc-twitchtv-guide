@@ -12,7 +12,11 @@ const Navigator = ({onListChange, activeTab}) => {
     }
     return (
       <li className="nav-item" key={tabName}>
-        <a className={"nav-link " + active } onClick={() => onListChange(tabName)} data-toggle="tab">{tabName}</a>
+        <a className={"nav-link " + active }
+          onClick={() => onListChange(tabName)}
+          data-toggle="tab">
+          {tabName}
+        </a>
       </li>
     );
   });

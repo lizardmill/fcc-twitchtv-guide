@@ -7,6 +7,13 @@ import async from 'async';
 
 const listOfTwitchers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"].sort((a,b) => a.toLowerCase() > b.toLowerCase());
 
+const divStyle = {
+  width: "400px",
+  padding: "25px",
+  margin: "auto",
+  background: "#5bb8bd"
+}
+
 export default class App extends Component {
 
   constructor(props) {
@@ -38,7 +45,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={divStyle}>
         <Navigator onListChange={this.setActiveTab} activeTab={this.state.activeTab}/>
         <SearchBar term={this.state.term} onSearchTermChange={this.setNewSearchTerm} />
         <ChannelList arrayOfTwitchers={this.getFilteredList(this.state.twitchers, this.state.activeTab, this.state.term) } />

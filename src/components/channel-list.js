@@ -3,21 +3,24 @@ import TwitchChannel from './twitch-channel.js';
 import PropTypes from 'prop-types';
 
 
+
 const ChannelList = ({arrayOfTwitchers}) => {
   const twitchers = arrayOfTwitchers.map(twitchers =>{
     let active = '';
-    if (twitchers.stream != null){
-      active = 'active';
-    }
+    console.log(twitchers);
+    // if (twitchers.stream != null){
+    //   active = 'active';
+    // }
     return (
       <li className={"list-group-item " + active} key={twitchers.name}>
-        <TwitchChannel twitchers={twitchers.name} />
+        <TwitchChannel twitcher={twitchers} />
       </li>
+
     );
   });
 
   return (
-    <ul className="col-md-4 list-group">
+    <ul className="list-group">
       {twitchers}
     </ul>
   );
