@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import TwitchChannel from './twitch-channel.js';
 import PropTypes from 'prop-types';
 
-
+const liStyle = {
+  borderTopLeftRadius: "0",
+  borderTopRightRadius: "0"
+}
 
 const ChannelList = ({arrayOfTwitchers}) => {
   const twitchers = arrayOfTwitchers.map(twitchers =>{
@@ -12,7 +15,7 @@ const ChannelList = ({arrayOfTwitchers}) => {
     //   active = 'active';
     // }
     return (
-      <li className={"list-group-item " + active} key={twitchers.name}>
+      <li className={"list-group-item " + active} key={twitchers.name} style={liStyle}>
         <TwitchChannel twitcher={twitchers} />
       </li>
 

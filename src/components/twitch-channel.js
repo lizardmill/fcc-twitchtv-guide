@@ -23,7 +23,7 @@ const TwitchChannel = ({twitcher}) => {
 
       <div className="media-heading">
 
-        <a href={channelLink}>{twitcher.name}</a> <div class="float-right"><i class={statusIcon}></i></div>
+        <a href={channelLink} target="_blank">{twitcher.name}</a> <div class="float-right"><i class={statusIcon}></i></div>
         {streamingInfo &&
         <p style={pStyle}>
           {streamingInfo}

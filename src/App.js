@@ -9,8 +9,10 @@ const listOfTwitchers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "
 
 const divStyle = {
   width: "400px",
+  height: "595px",
   padding: "25px",
-  margin: "auto",
+  margin: "10px auto",
+  borderRadius: "10px",
   background: "#5bb8bd"
 }
 
